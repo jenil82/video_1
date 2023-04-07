@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../provider/Video_Provider.dart';
 
-class PlayScreen extends StatefulWidget {
-  const PlayScreen({Key? key}) : super(key: key);
+class Play extends StatefulWidget {
+  const Play({Key? key}) : super(key: key);
 
   @override
-  State<PlayScreen> createState() => _PlayScreenState();
+  State<Play> createState() => _PlayState();
 }
 
-class _PlayScreenState extends State<PlayScreen> {
+class _PlayState extends State<Play> {
   @override
   @override
   VideoProvider? moj, mojf;

@@ -1,3 +1,4 @@
+import 'dart:html';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,8 +16,8 @@ void main()
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
-          '/':(context) => VideoScreen(),
-          '1':(context) => PlayScreen(),
+          '/':(context) => Video(),
+          '1':(context) => Play(),
         },
       ),
     ),

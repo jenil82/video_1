@@ -3,14 +3,14 @@ import 'package:provider/provider.dart';
 
 import '../provider/Video_Provider.dart';
 
-class VideoScreen extends StatefulWidget {
-  const VideoScreen({Key? key}) : super(key: key);
+class Video extends StatefulWidget {
+  const Video({Key? key}) : super(key: key);
 
   @override
-  State<VideoScreen> createState() => _VideoScreenState();
+  State<Video> createState() => _VideoState();
 }
 
-class _VideoScreenState extends State<VideoScreen> {
+class _VideoState extends State<Video> {
   VideoProvider? videoProvider, videoProvidert;
 
   @override
@@ -37,7 +37,7 @@ class _VideoScreenState extends State<VideoScreen> {
               child: Container(
                 margin: EdgeInsets.only(left:160, right:160, top:40, bottom:10),
                 height: 180,
-                width: 180,
+                width: 100,
                 child: Column(
                   children: [
                     Container(
@@ -45,21 +45,11 @@ class _VideoScreenState extends State<VideoScreen> {
                       width: 180,
                       child: ClipRRect(
                           borderRadius: BorderRadius.only(topLeft: Radius
-                              .circular(8), topRight: Radius.circular(8)),
+                              .circular(20), topRight: Radius.circular(20)),
                           child: Image.asset("${videoProvider!.Images[index]}",
                             fit: BoxFit.cover,)),
                     ),
                   ],
-                ),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.white,
-                        blurRadius: 4,
-                        spreadRadius: -1,
-                      ),
-                    ]
                 ),
               ),
             );
